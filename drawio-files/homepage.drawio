@@ -1,0 +1,34 @@
+<mxfile host="65bd71144e">
+    <diagram id="aauek7yZnyRqjjeC9CnR" name="Page-1">
+        <mxGraphModel dx="1314" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry width="850" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Logo and Title" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Profile/Login" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="710" y="15" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Cool Banner Pic Here" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry y="60" width="850" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Empty Space (for now??)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry y="240" width="850" height="450" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Footer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry y="690" width="850" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Sign Up" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="780" y="15" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Donate" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="15" width="60" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,849 @@
+/* OVERALL COLOR/TEXT VARS ------------------- */
+:root {
+
+  --white:          #ffffff;
+  --whiteWTrnsp:    #ffffffbe;
+
+  --ltGrey:         #cdcdcd;
+  --ltYellow:       #fff6a2;
+  --ltPurple:       #a6a2ff;
+
+  --mdGrey:         #636363;
+  --mdBlue:         #5271ff;
+  --mdPurple:       #5e17eb;
+
+  --dkBlue:         #000639d8;
+  --dkPurple:       #130039;
+  --dkPurpleWTrnsp: #130039d8;
+
+  --font-logoFont:  "Hammersmith One";
+  --font-subtitle:  "Quantico";
+  --font-pixels:    "Press Start 2P";
+
+/* 
+  --font-bulletText: "Poiret One"; */
+/* 
+  --font-bulletText: "Marck Script"; */
+  --font-bulletText: "Rajdhani";
+  --font-bulletText: "Electrolize";
+  --font-bulletText: "Satisfy";
+  --font-bulletText: "Press Start 2P";
+  --font-bulletText: "El Messiri";
+  --font-bulletText: "Trebuchet MS";
+  --font-bulletText: "Hammersmith One";
+
+}
+
+
+/* NAVBAR STYLINGS --------------------------- */
+/* fills the width of page */
+header {
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  height: 150px;
+
+  /* slight transparency so bgrd comes through */
+  background-color: var(--dkPurpleWTrnsp);
+}
+
+#navBar-titleDiv {
+  display: inline-block;
+}
+
+/* this prevents gap between nav and banner */
+ul#navBar-titleDiv.left {
+  height:0px;
+}
+
+#navBar-logo {
+  padding: 10px;
+  height: 150px;
+}
+
+#navBar-subtitle {
+  padding-top: 47px;
+
+  font-size: 28px;
+  font-family: var(--font-subtitle);
+  
+  color: var(--ltYellow);
+}
+
+#navBar-links {
+  display: inline-block;
+
+  background-color: #ffffff;
+}
+
+#navBar-linksDiv {
+  padding: 10px;
+  padding-top: 80px;
+}
+
+.navBtn {
+  color: var(--white);
+  background-color: var(--mdPurple);
+}
+
+.navBtn:hover {
+  background-color: var(--mdBlue);
+}
+
+.nav-a:hover {
+  opacity: 1;
+  color: var(--ltPurple);
+  background-color: #00000000; 
+}
+
+
+/* MARQUEE FUNCTIONALITY --------------------- */
+.marquee-div {
+  width: 100%;
+  height: 300px;	
+  overflow: hidden;
+  position: relative;
+  /* color: orange; */
+}
+
+.marquee-contents {
+  display: inline-flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /* Apply animation to this element */	
+  -moz-animation: scroll-left 45s linear infinite;
+  -webkit-animation: scroll-left 45s linear infinite;
+  animation: scroll-left 45s linear infinite;
+
+  /* animation-iteration-count: infinite; */
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+  0%   { -moz-transform: translateX(100%); }
+  100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+  0%   { -webkit-transform: translateX(100%); }
+  100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+  0%   { 
+  -moz-transform: translateX(0%); /* Browser bug fix */
+  -webkit-transform: translateX(0%); /* Browser bug fix */
+  transform: translateX(0%); 		
+  }
+  100% { 
+  -moz-transform: translateX(-100%); /* Browser bug fix */
+  -webkit-transform: translateX(-100%); /* Browser bug fix */
+  transform: translateX(-100%); 
+  }
+}
+
+
+/* GENERAL BODY ------------------------------ */
+body, html{
+  height:100%;
+  margin:0;
+  padding:0;
+}
+
+#container-div{
+  position: relative;
+  min-height: 100vh;
+}
+
+#all-non-footer-content-div {
+  padding-bottom: 90px; 
+}
+
+body { 
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #433b53; 
+
+  background-image:url("../img/backgrounds/purpleVectorMirrored.png");
+  background-size: cover;
+}
+
+
+/* FOOTER ------------------------------------ */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  margin-top: 25px;
+  
+  text-align: center;
+
+  /* slight transparency so bgrd comes through */
+  background-color: var(--dkPurpleWTrnsp);
+}
+
+#footer-div {
+  display: inline-flex;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-text {
+  padding: 40px;
+  padding-bottom: 30px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 20px;
+  font-family: var(--font-pixels);
+  color: var(--mdPurple);
+}
+
+.footer-icon {
+  margin: 10px;
+  height: 70px;
+}
+
+
+/* MODAL STYLING ----------------------------- */
+.modal {
+  background-color: var(--white);
+  margin: auto;
+  margin-top:70px;
+  text-align: center;
+}
+
+.modal-content {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.modal-content h4 {
+  font-size: 30px;
+  font-family: var(--font-subtitle);
+  color: var(--dkPurple);
+}
+
+.linkToOtherModal-div {
+  display: inline-flex;
+  margin-bottom: 30px;
+}
+
+.linkToOtherModal-div a {
+  padding-left: 5px;
+  color: var(--mdBlue);
+}
+
+.modal .material-icons {
+  margin-left: 5px;
+  width: 30px;
+}
+
+textarea.materialize-textarea:focus:not([read-only]) {
+  border-bottom: 1px solid var(--mdPurple);
+  box-shadow: 0 1px solid var(--mdPurple);
+}
+
+textarea.materialize-textarea:focus:not([read-only])+label {
+  color: var(--mdPurple);
+}
+
+.modal-footer-linksDiv {
+  padding-right: 50px;
+}
+
+.modal-footer a {
+  color: var(--white);
+  background-color: var(--mdBlue);
+}
+
+.modal-footer-linksDiv .modal-footer-cancel {
+  margin-right: 200px;
+  color: var(--mdGrey);
+  background-color: var(--ltGrey);
+}
+
+.modal-footer-linksDiv a:hover {
+  opacity: 1;
+  background-color: var(--mdPurple);
+}
+
+.modal-footer-linksDiv .modal-footer-cancel:hover {
+  color: var(--dkPurple);
+  background-color: var(--ltPurple);
+}
+
+
+/* PAGE SPECIFIC STYLING --------------------- */
+
+
+/* HOME/ABOUT BODY --------------------------- */
+#aboutUs-div {
+  margin: 0px;
+  width: 100%;
+  display: inline-block;
+}
+
+/* INFO GRAPHICS ----------------------------- */
+#aboutUs-div-content {
+  margin: auto;
+  width: 70%;
+}
+
+#aboutUs-infoGraphics-heading {
+  width: 100%;
+  height: 70px;
+
+  text-align: center;
+}
+
+#aboutUs-infoGraphic-headingText {
+  padding: 10px;
+
+  font-size: 45px;
+  color: var(--ltYellow);
+  font-family: var(--font-subtitle);
+
+}
+
+.aboutUs-infoGraphics {
+  display: inline-block;
+
+  width: 100%;
+  height: 170px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  border-radius: 80px;
+
+  background-color: var(--ltGrey);
+}
+
+.aboutUs-infoGraphicImgs {
+  float: left;
+  margin: 20px;
+  margin-left: 27px;
+  height: 130px;
+}
+
+.aboutUs-infoGraphicText-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 27px;
+  margin-right: 50px;
+
+  font-size: 27px;
+  color: var(--dkPurpleWTrnsp);
+  font-family: var(--font-bulletText);
+
+  height: 150px;
+  /* border: 3px solid green; */
+  position: relative;
+}
+
+.aboutUs-infoGraphicText {
+
+  width: 70%;
+
+  font-size: 27px;
+  color: var(--dkPurpleWTrnsp);
+  font-family: var(--font-bulletText);
+
+  line-height: 1.5;
+  vertical-align: middle;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+}
+
+#aboutUs-infoGraphics-bottomLinks {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+
+  text-align: center;
+}
+
+#aboutUs-infoGraphics-bottomLinks a {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+
+  background-color: var(--mdBlue);
+  color: var(--dkPurple);
+}
+
+#aboutUs-infoGraphics-bottomLinks a:hover {
+  background-color: var(--ltYellow);
+  color: var(--dkPurpleWTrnsp);
+}
+
+
+
+/* ADD FRIEND --------------------------------- */
+#addFriend-contentDiv {
+  margin: 0px;
+  width: 100%;
+  display: inline-flex;
+} 
+
+#addFriend-centerDiv {
+
+  width: 60%;
+
+}
+
+#addFriend-header {
+  height: 70px;
+  margin: auto;
+  font-family: var(--font-subtitle);
+  color: var(--ltYellow);
+
+  text-align: center;
+  font-size: 45px;
+  color: var(--ltYellow);
+  font-family: var(--font-subtitle);
+
+  background-color: var(--dkPurpleWTrnsp);
+}
+
+#addFriend-header h3 {
+padding-top: 10px;
+}
+
+#addFriend-cancelLink {
+  position: absolute;
+  left: 20%;
+  top: 207px;
+  padding-left: 15px;
+  /* float: left; */
+
+  font-size: 15px;
+  color: var(--mdBlue);
+  font-family: var(--font-bulletText);
+  font-family: sans-serif;
+}
+
+#addFriend-form {
+  margin: auto;
+  text-align: center;
+
+  background-color: var(--whiteWTrnsp);
+}
+
+#addFriend-form-contentDiv {
+
+  width: 85%;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+
+}
+
+#addFriend-footer {
+  height: 40px;
+  /* margin: auto; */
+  padding: 6px;
+  padding-right: 25px;
+
+  text-align: end;
+  font-size: 25px;
+  color: var(--ltYellow);
+  font-family: sans-serif;
+
+  background-color: var(--dkPurpleWTrnsp);
+}
+
+#addFriend-saveLink {
+  padding: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 3px;
+
+  text-align: center;
+  font-size: 20px;
+  color: var(--white);
+  font-family: sans-serif;
+
+  background-color: var(--mdPurple);
+}
+
+#addFriend-saveLink:hover {
+  opacity: 1;
+  background-color: var(--mdBlue);
+}
+
+#addFriend-cancelLink:hover {
+  opacity: 1;
+  color: var(--ltPurple);
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+  background-color: var(--ltPurple);
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+  background-color: var(--mdPurple);
+}
+
+#friendIRL-switchLabel {
+
+  color: var(--dkPurple);
+
+}
+
+#addFriend-switchDiv {
+  float: left;
+  padding-top: 13px;
+  padding-left: 325px;
+}
+
+.addFriend-prefixIcons {
+  float:left;
+  margin-left: 5px;
+  width: 30px;
+  max-height: 35px;
+}
+
+.addFriend-mainText {
+  margin-left: 45px;
+
+  color: var(--dkPurple);
+}
+
+label.addFriend-mainText {
+  font-size: 18px;
+  color: var(--mdGrey);
+}
+
+.dropdown-trigger {
+  margin-left: 10px;
+  padding: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+
+  padding-left: 0px;
+  color: var(--dkPurple);
+  background-color: #00000000;
+}
+
+.dropdown-trigger:hover {
+  opacity: 1;
+  color: var(--mdBlue);
+  background-color: #00000000;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+  text-align: center;
+  color: var(--dkPurple);
+}
+
+#addFriend-textarea-1 {
+  float: left;
+  margin-left: 10px;
+}
+
+#addFriend-textarea-2 {
+  float: left;
+  margin-left: 10px;
+}
+
+.addFriend-textarea-div {
+  display: inline-flex;
+}
+
+#addFriend-platformDropdown {
+  min-width: 200px;
+}
+
+/* ADD FRIEND MARGINS ------------------------- */
+#addFriend-marginDiv-left {
+  width: 20%;
+}
+
+#addFriend-marginDiv-right {
+  width: 20%;
+}
+
+.addFriend-marginImg {
+  position: relative;
+  top: 125px;
+  left: 10%;
+
+  border: 4px solid var(--dkPurpleWTrnsp);
+  width: 80%;
+}
+
+
+
+/* MEET DEVS PAGE ----------------------------- */
+.meetDevs-div {
+  width: 50%;
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  padding: 15px;
+  border-radius: 15px;
+
+  background-color: var(--whiteWTrnsp);
+}
+
+.dev-div {
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px; 
+  border-radius: 15px;
+
+  font-family: var(--font-logoFont);
+  font-size: 18px;
+
+  background-color: var(--whiteWTrnsp);
+}
+
+.dev-div-trnsp {
+
+  background-color: #00000000;
+
+}
+
+.dev-header {
+  margin: auto;
+  font-family: var(--font-subtitle);
+  color: var(--ltYellow);
+
+  text-align: center;
+  font-size: 45px;
+  color: var(--mdPurple);
+  font-family: var(--font-subtitle);
+}
+
+.dev-text {
+  line-height: 1.25;
+  margin-bottom: 25px;
+  color: var(--dkPurple);
+}
+
+.dev-text-lastP {
+
+  margin-bottom: 0px;
+
+}
+
+.dev-div h4 {
+  margin: 0;
+  padding-bottom: 2px;
+  font-size: 20px;
+}
+
+
+
+/* FRIENDSLIST PAGE --------------------------- */
+/* HEADER STUFF */
+#friendlist-header {
+  width: 100%;
+  height: 70px;
+  background-color: var(--dkPurpleWTrnsp);
+}
+
+#friendlist-header h3 {
+  padding: 0;
+  padding-top: 5px;
+  margin: 0;
+  margin-top: 4px;
+
+  text-align: center;
+  font-size: 45px;
+  color: var(--ltYellow);
+  font-family: var(--font-subtitle);
+}
+
+#friendlist-header-inside {
+  height: 45px;
+  margin-top: -10px;
+  background-color: var(--mdPurple);
+}
+
+#friendlist-header-icon {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+#friendlist-header-label {
+  color: var(--dkPurple);
+}
+
+#friendlist-header-dropdown {
+  color: var(--ltPurple);
+}
+
+#friendlist-header-dropdown:hover {
+  color: var(--ltYellow);
+}
+
+
+/* FRIENDLIST DIVS */
+#friendlist-content-div {
+  margin-top: 5px;
+  width: 100%;
+  display: inline-flex;
+}
+
+
+/* LEFT DIV */
+#friendlist-left-div {
+  width: 30%;
+
+  /* background-color: var(--dkBlue); */
+}
+
+#friendlist-header-left {
+  width: 100%;
+  height: 60px;
+  background-color: var(--dkBlue);
+}
+
+#friendlist-header-left h3 {
+  padding: 0;
+  padding-top: 20px;
+  margin: 0;
+  margin-top: 4px;
+
+  text-align: center;
+  font-size: 25px;
+  color: var(--ltYellow);
+  font-family: var(--font-subtitle);
+}
+
+#friendlist-header-inside-left {
+  height: 45px;
+  margin-top: 0px;
+  padding: 12px;
+
+
+  font-size: 18px;
+  background-color: var(--mdBlue);
+}
+
+.friendlist-achievement {
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 20px;
+  border-radius: 45px;
+  padding: 15px;
+  display: inline-flex;
+
+  background-color: var(--dkBlue);
+}
+
+.friendlist-achievement-icon {
+  border-radius: 35px;
+  height: 70px;
+}
+
+.friendlist-achievement-textDiv {
+  padding-left: 20px;
+}
+
+.friendlist-achievement-title {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 22px;
+  font-family: var(--font-subtitle);
+  color: var(--mdBlue);
+}
+
+.friendlist-achievement-subtitle {
+  margin: 0;
+  font-size: 18px;
+  /* font-family: var(--font-logoFont); */
+  color: var(--ltPurple);
+}
+
+
+
+/* RIGHT DIV */
+#friendlist-right-div {
+  width: 70%;
+
+  /* background-color: var(--ltGrey); */
+}
+
+#friendlist-header-addNew {
+  margin-top: 4px;
+  margin-right: 15px;
+  float: right;
+
+  background-color: var(--mdBlue);
+}
+
+#friendlist-header-addNew:hover {
+  opacity: 1;
+  color: var(--mdGrey);
+  background-color: var(--ltYellow);
+}
+
+.friendlist-friend {
+  width: 96%;
+  margin-left: 1.4%;
+  margin-top: 20px;
+  border-radius: 45px;
+  padding: 15px;
+  display: inline-flex;
+
+  background-color: var(--dkPurple);
+}
+
+.friendlist-friend-icon {
+  border-radius: 35px;
+  height: 70px;
+}
+
+.friendlist-friend-textDiv {
+  min-width: 250px;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.friendlist-friend-name {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-family: var(--font-pixels);
+  color: var(--ltYellow);
+}
+
+.friendlist-friend-platform {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-family: var(--font-subtitle);
+  color: var(--mdBlue);
+}
+
+.friendlist-friend-notes {
+  margin: 0;
+  padding-right: 18px;
+  font-size: 18px;
+  /* font-family: var(--font-logoFont); */
+  color: var(--ltPurple);
+}
+
+#friendlist-spacingDiv {
+  width: 100%;
+  height: 35px;
+  /* margin-bottom: 20px; */
+}
