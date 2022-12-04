@@ -15,7 +15,8 @@ const friendSchema = new Schema({
     trim: true,
   },
   irl: {
-    type: Boolean
+    type: Boolean,
+    required: true,
   },
   notes: {
     type: String,
