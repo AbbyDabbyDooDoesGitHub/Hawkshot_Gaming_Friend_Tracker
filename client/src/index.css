@@ -240,6 +240,7 @@ body {
 
 /* FOOTER ------------------------------------ */
 #footer-div {
+  
   text-align: center;
 
   /* slight transparency so bgrd comes through */
@@ -351,6 +352,7 @@ textarea.materialize-textarea:focus:not([read-only])+label {
 /* INFO GRAPHICS ----------------------------- */
 #aboutUs-div-content {
   margin: auto;
+  width: 70%;
 }
 
 #aboutUs-infoGraphics-heading {

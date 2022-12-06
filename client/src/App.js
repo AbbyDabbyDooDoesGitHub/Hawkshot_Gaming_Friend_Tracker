@@ -67,8 +67,6 @@ function App() {
           <Header />
 
           <Banner /> 
-
-          <div className="container">
             
             <Routes>
               <Route 
@@ -97,11 +95,9 @@ function App() {
               />
           
             </Routes>
-            
-          </div>
 
         </div>
-        
+
 
         <Footer />
 
