@@ -5,51 +5,44 @@ export const QUERY_USER = gql`
     user(username: $username) {
       _id
       username
+      realName
       email
-      accounts {
+      friends {
         _id
+        platform
         gamerName
-        gameNote
+        irl
+        notes
         createdAt
       }
     }
   }
 `;
 
-export const QUERY_ACCOUNTS = gql`
-  query getAccounts {
-    accounts {
-      _id
-      
-      gamerName
-      gameNote
-      createdAt
+export const QUERY_FRIENDS = gql`
+  query getFriends($username: String!) {
+    user(username: $username){
       friends {
         _id
-        
-        friendName
-        friendNote
+        platform
+        gamerName
+        irl
+        notes
         createdAt
       }
     }
   }
 `;
 
-export const QUERY_SINGLE_ACCOUNT = gql`
-  query getSingleAccount($accountId: ID!) {
-    account(accountId: $accountId) {
+export const QUERY_SINGLE_FRIEND = gql`
+  query getSingleFriend($friendId: ID!) {
+    account(friendId: $friendId) {
       _id
-      
-      gamerName
-      gameNote
-      createdAt
-      friends {
-        _id
-        
-        friendName
-        friendNote
+        platform
+        gamerName
+        irl
+        notes
         createdAt
-      }
     }
   }
 `;
@@ -59,12 +52,14 @@ export const QUERY_ME = gql`
     me {
       _id
       username
+      realName
       email
-      accounts {
+      friends {
         _id
-        
+        platform
         gamerName
-        gameNote
+        irl
+        notes
         createdAt
       }
     }
