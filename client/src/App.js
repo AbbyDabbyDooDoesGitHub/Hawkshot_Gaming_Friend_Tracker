@@ -59,6 +59,7 @@ function App() {
   return (
 
     <ApolloProvider client={client}>
+
       <Router>
         <div id="appContainer">
           
