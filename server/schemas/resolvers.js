@@ -1,25 +1,25 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Account } = require('../models');
+const { User, Friend } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('accounts');
+      return User.find().populate('friends');
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('accounts');
+      return User.findOne({ username }).populate('friends');
     },
-    accounts: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Account.find(params).sort({ createdAt: -1 });
+    friends: async (parent, { gamerName }) => {
+      const params = gamerName ? { gamerName } : {};
+      return Friend.find(params).sort({ createdAt: -1 });
     },
-    account: async (parent, { accountId }) => {
-      return Account.findOne({ _id: accountId });
+    friend: async (parent, { friendId }) => {
+      return Friend.findOne({ _id: friendId });
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('accounts');
+        return User.findOne({ _id: context.user._id }).populate('friends');
       }
       throw new AuthenticationError('You need to be logged in!');
     },
