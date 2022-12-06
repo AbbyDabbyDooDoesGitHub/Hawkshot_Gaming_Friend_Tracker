@@ -13,8 +13,8 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_USER = gql`
-  mutation addUser($username: String!, $email: String!, $password: String!) {
-    addUser(username: $username, email: $email, password: $password) {
+  mutation addUser($username: String!, $realName: String, $email: String!, $password: String!) {
+    addUser(username: $username, realName: $realName, email: $email, password: $password) {
       token
       user {
         _id
@@ -24,64 +24,28 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_ACCOUNT = gql`
-  mutation addAccount($gamerName: String!, $gameNote: String!) {
-    addAccount(gamerName: $gamerName, gameNote: $gameNote) {
+export const ADD_FRIEND = gql`
+  mutation addFriend($platform: String!, $gamerName: String!, $irl: Boolean!, $notes: String) {
+    addAccount(platform: $platform, gamerName: $gamerName, irl: $irl, notes: $notes) {
       _id
+      platform
       gamerName
-      gameNote
-    
+      irl
+      notes
       createdAt
-      friends {
-        _id
-        friendName
-        friendNote
-      }
     }
   }
 `;
 
-export const REMOVE_ACCOUNT = gql`
-  mutation removeAccount($accountId: ID!) {
-    removeAccount(accountId: $accountId) {
+export const REMOVE_FRIEND = gql`
+  mutation removeFriend($friendId: ID!) {
+    removeFriend(friendId: $friendId) {
       _id
-        
+      platform
       gamerName
-      gameNote
+      irl
+      notes
     }
   }
 `
-
-export const ADD_FRIEND = gql`
-  mutation addFriend($accountId: ID!, $friendName: String!, $friendNote: String!) {
-    addFriend(accountId: $accountId, friendName: $friendName, friendNote: $friendNote) {
-      _id
-      gamerName
-      gameNote
-    
-      createdAt
-      friends {
-        _id
-        friendName
-        friendNote
-        createdAt
-      }
-    }
-  }
-  
-`
- 
- export const REMOVE_FRIEND= gql`
-  mutation removeFriend($accountId: ID!, $friendId: ID!) {
-     removeFriend(accountId: $accountId, friendId: $friendId) {
-      _id
-        
-      friendName
-       friendNote
-       _id
-       
-      
-     }
-  }
- `
 ;
