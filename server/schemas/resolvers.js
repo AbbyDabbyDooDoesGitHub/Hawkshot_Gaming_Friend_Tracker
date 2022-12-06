@@ -1,33 +1,33 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Account } = require('../models');
+const { User, Friend } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('accounts');
+      return User.find().populate('friends');
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('accounts');
+      return User.findOne({ username }).populate('friends');
     },
-    accounts: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Account.find(params).sort({ createdAt: -1 });
+    friends: async (parent, { gamerName }) => {
+      const params = gamerName ? { gamerName } : {};
+      return Friend.find(params).sort({ createdAt: -1 });
     },
-    account: async (parent, { accountId }) => {
-      return Account.findOne({ _id: accountId });
+    friend: async (parent, { friendId }) => {
+      return Friend.findOne({ _id: friendId });
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('accounts');
+        return User.findOne({ _id: context.user._id }).populate('friends');
       }
       throw new AuthenticationError('You need to be logged in!');
     },
   },
 
   Mutation: {
-    addUser: async (parent, { username, email, password }) => {
-      const user = await User.create({ username, email, password });
+    addUser: async (parent, { username, realName, email, password }) => {
+      const user = await User.create({ username, realName, email, password });
       const token = signToken(user);
       return { token, user };
     },
@@ -48,71 +48,39 @@ const resolvers = {
 
       return { token, user };
     },
-    addAccount: async (parent, { gamerName, gameNote }, context) => {
+    addFriend: async (parent, { platform, gamerName, irl, notes }, context) => {
       if (context.user) {
-        const account = await Account.create({
+        const friend = await Friend.create({
+          platform,
           gamerName,
-          gameNote,
-          
+          irl,
+          notes,
+
           username: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { accounts: account._id } }
+          { $addToSet: { friends: friend._id } }
         );
 
-        return account;
+        return friend;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    addFriend: async (parent, { accountId, friendName, friendNote }, context) => {
+    removeFriend: async (parent, { friendId }, context) => {
       if (context.user) {
-        return Account.findOneAndUpdate(
-          { _id: accountId },
-          {
-            $addToSet: {
-              friends: {  username: context.user.username,  friendName, friendNote },
-            },
-          },
-          {
-            new: true,
-            runValidators: true,
-          }
-        );
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    removeAccount: async (parent, { accountId }, context) => {
-      if (context.user) {
-        const account = await Account.findOneAndDelete({
-          _id: accountId,
+        const friend = await Friend.findOneAndDelete({
+          _id: friendId,
           username: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { accounts: account._id } }
+          { $pull: { friends: friend._id } }
         );
 
         return account;
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    removeFriend: async (parent, { accountId, friendId }, context) => {
-      if (context.user) {
-        return Account.findOneAndUpdate(
-          { _id: accountId },
-          {
-            $pull: {
-              friends: {friendId
-                // _id: friendId,
-                // username: context.user.username,
-              },
-            },
-          },
-          { new: true }
-        );
       }
       throw new AuthenticationError('You need to be logged in!');
     },
