@@ -237,7 +237,7 @@ body {
   padding: 0;
   background-color: #433b53; 
 
-  background-image:url("../img/backgrounds/purpleVectorMirrored.png");
+  background-image:url("./img/backgrounds/purpleVectorMirrored.png");
   background-size: cover;
 }
 
