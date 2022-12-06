@@ -25,7 +25,7 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_FRIEND = gql`
-  mutation addAccount($platform: String!, $gamerName: String!, $irl: Boolean!, $notes: String) {
+  mutation addFriend($platform: String!, $gamerName: String!, $irl: Boolean!, $notes: String) {
     addAccount(platform: $platform, gamerName: $gamerName, irl: $irl, notes: $notes) {
       _id
       platform
