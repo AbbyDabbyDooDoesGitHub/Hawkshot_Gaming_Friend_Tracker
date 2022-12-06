@@ -61,7 +61,8 @@ function App() {
     <ApolloProvider client={client}>
 
       <Router>
-        <div id="appContainer">
+
+        <div id="allButFooter-div">
           
           <Header />
 
@@ -100,6 +101,9 @@ function App() {
           </div>
 
         </div>
+        
+
+        <Footer />
 
 
       </Router>

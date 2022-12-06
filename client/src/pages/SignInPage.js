@@ -94,8 +94,6 @@ export default function SignInPage() {
 
             </div>
 
-            <Footer />
-
 
         </div>
 

@@ -122,14 +122,7 @@ export default function AddFriend() {
                         </div>
 
                     </div>
-
-
-
-                    <div id="addFriend-footer">
-
-                        <a id="addFriend-saveLink" href="./friendlistHome.html">SAVE</a>
-
-                    </div>
+                    
 
                 </div>
 
@@ -142,11 +135,7 @@ export default function AddFriend() {
                 </div>
 
 
-
             </div>
-
-            <Footer />
-
 
 
         </div>
