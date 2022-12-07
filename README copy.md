@@ -9,6 +9,7 @@
 
 
 ## Description 
+Hawkshot is an app developed to help users keep track of and organize their gaming friends list. Users will be able to add friends with information including: which game they are from, if the friend is known in-real-life (irl), and any other notable information the user would like to include. We hope that this will help users make more informed decisions about who they would like to play with given they are feeling like playing a certain game/gamemode.
 
 ### User Story
 
@@ -30,7 +31,7 @@ There is currently a known issue with the deployed app. It will load up the home
 
 ## Technologies
 Heroku
-MongoDb Attlis
+MongoDb Atlas
 NPM Apollo Client Package <br />
 NPM Apollo-Server-Express Package<br />
 NPM GraphQL Package<br />
