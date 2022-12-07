@@ -7,8 +7,12 @@ import Auth from '../utils/auth';
 // import NewAccountModal from '../components/NewAccountModal';
 import Footer from '../components/Footer';
 import PlatformDropdown from '../components/PlatformDropdown';
+// import { ADD_FRIEND } from '../../utils/mutations';
 
 export default function AddFriend() {
+   
+//   const [addFriend, { error }] = useMutation(ADD_FRIEND);
+
   return (
 
     <React.Fragment>
@@ -16,74 +20,46 @@ export default function AddFriend() {
 
         {/* <!-- ADD A FRIEND PAGE CONTENT DIV --> */}
         <div id="addFriend-contentDiv">
-
             <div id="addFriend-marginDiv-left">
+             <img class="addFriend-marginImg" id="addFriend-marginImg-left" src="../img/icons/22.png" alt="Banner image" />
+                </div>
 
-            <img class="addFriend-marginImg" id="addFriend-marginImg-left" src="../img/icons/22.png" alt="Banner image" />
-
-            </div>
-
-
-
-            <div id="addFriend-centerDiv">
-
+             <div id="addFriend-centerDiv">
             {/* <!-- ADD FRIEND HEADER --> */}
-            <div id="addFriend-header">
+             <div id="addFriend-header">
 
-                <a id="addFriend-cancelLink" href="/FriendlistHome">Return to My Friendslist</a>
-
+                    <a id="addFriend-cancelLink" href="/FriendlistHome">Return to My Friendslist</a>
                 <h3>Add a Friend</h3>
-
             </div>
-
-
-
                 <div id="addFriend-form">
-
                     <div id="addFriend-form-contentDiv">
-
                         <div class="row">
                             <form class="col s12">
                                 <div class="row">
-
                                     <div class="input-field col s12">
-
                                         <img class="addFriend-prefixIcons" src="../img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
-
                                         <label class="addFriend-mainText">
                                             Do you know this person in real life? 
                                         </label>
-
                                         <div class="switch" id="addFriend-switchDiv">
-
                                             <label id="friendIRL-switchLabel">
                                                 NO
                                                 <input type="checkbox"/>
                                                 <span class="lever"></span>
                                                 YES
                                             </label>
-
                                         </div>
-
                                     </div>
 
-
-
                                     <div class="input-field col s12">
-
                                         <img class="addFriend-prefixIcons" src="../img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
-
                                         <label class="addFriend-mainText">
-
                                             Select the Platform Name for this Friend:
-
                                             <a class='dropdown-trigger selectedDropdown' href='#' data-target='addFriend-platformDropdown'>
                                             League of Legends
                                             </a>
-
                                         </label>
                                     </div>
-
                                     <PlatformDropdown />
 
                                     <div class="input-field col s12 addFriend-textarea-div">
@@ -105,6 +81,9 @@ export default function AddFriend() {
                                         <label for="icon_prefix2" class="addFriend-mainText">Notes</label>
                                     
                                     </div>
+                                    <a class="btn" id="addfriend-submit" href='FriendlistHome'>
+                            SUBMIT
+                            </a>
 
                                 </div>
 
