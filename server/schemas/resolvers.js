@@ -48,41 +48,31 @@ const resolvers = {
 
       return { token, user };
     },
-    addFriend: async (parent, { platform, gamerName, irl, notes }, context) => {
-      if (context.user) {
-        const friend = await Friend.create({
-          platform,
-          gamerName,
-          irl,
-          notes,
+    addFriend: async (parent, { platform, gamerName, irl, notes, username}) => {
+      const friend = await Friend.create({
+        platform,
+        gamerName,
+        irl,
+        notes,
+      });
 
-          username: context.user.username,
-        });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { friends: friend._id } }
-        );
-
-        return friend;
-      }
-      throw new AuthenticationError('You need to be logged in!');
+      await User.findOneAndUpdate(
+        { username: username },
+        { $addToSet: { friends: friend._id } }
+      );
+      return friend;
     },
-    removeFriend: async (parent, { friendId }, context) => {
-      if (context.user) {
+    removeFriend: async (parent, { friendId, username }) => {
         const friend = await Friend.findOneAndDelete({
           _id: friendId,
-          username: context.user.username,
         });
 
         await User.findOneAndUpdate(
-          { _id: context.user._id },
+          { username: username },
           { $pull: { friends: friend._id } }
         );
 
-        return account;
-      }
-      throw new AuthenticationError('You need to be logged in!');
+        return friend;
     },
   },
 };
