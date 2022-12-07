@@ -29,7 +29,9 @@ Heroku Deployed App: https://hawkshot-friend-list.herokuapp.com/
 GitHub Repo: https://github.com/AbbyDabbyDooDoesGitHub/Hawkshot_Gaming_Friend_Tracker
 
 ## Issues
-There is currently a known issue with the deployed app. It will load up the homepage just fine, but if the user tries to go to any other page, they will only be met with a blank page.
+- Known issue with the deployed app. It will load up the homepage just fine, but if the user tries to go to any other page, they will only be met with a blank page.
+- Known issue with friends not populating after user submits friend information
+- Pages not mobile-ready as of yet
 
 ## Technologies
 Heroku
