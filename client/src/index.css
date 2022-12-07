@@ -899,7 +899,6 @@ label.addFriend-mainText {
 
 
 
-
 /* fixing padding issue */
 
 body {
@@ -938,4 +937,101 @@ div#aboutUs-div {
 #addFriend-cancelLink {
   position: absolute;
   top:55px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*! Screen Sizing Formats */
+
+@media only screen and (max-width: 1430px) {
+
+  /* main page */
+  .aboutUs-infoGraphicText {
+    width: 80%;
+  }
+  
+
+}
+
+
+
+@media only screen and (max-width: 1266px) {
+
+  /* main page */
+  .aboutUs-infoGraphicText {  
+    font-size: 24px;
+  }
+
+  #aboutUs-div-content {
+    width: 80%;
+  }
+
+}
+
+@media only screen and (max-width: 1036px) {
+
+  /* main page */
+  .aboutUs-infoGraphicText {  
+    font-size: 24px;
+  }
+
+  #aboutUs-div-content {
+    width: 95%;
+  }
+
+  ul#navBar-linksDiv.right {
+    padding-top: 50px;
+  }
+
+  img#navBar-logo {
+    height: 120px;
+  }
+
+  h1#navBar-subtitle {
+    font-size: 25px;
+    padding-top: 27px;
+  }
+
+  nav {
+    height: 125px;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 929px) {
+
+  /* main page */
+
+  ul#navBar-linksDiv.right {
+    padding-top: 90px;
+    padding-left: 35px;
+    width: 100%;
+  }
+
+  nav {
+    height: 150px;
+  }
+  
+  .marquee-contents img {
+    height: 150px;
+  }
+
+  ul.marquee-contents {
+    height: 150px;
+  }
+
+  .marquee-div {
+    height: 150px;
+  }
+
 }
