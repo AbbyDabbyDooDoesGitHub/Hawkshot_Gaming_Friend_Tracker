@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Hawkshot: Gaming Friend Tracker
+## Table of Contents
+- [Description](#description)
+- [Usage](#usage)
+- [Links](#links)
+- [Issues](#issues)
+- [Technologies](#technologies)
+- [Contribution](#contribution)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Description 
+Hawkshot is an app developed to help users keep track of and organize their gaming friends list. Users will be able to add friends with information including: which game they are from, if the friend is known in-real-life (irl), and any other notable information the user would like to include. We hope that this will help users make more informed decisions about who they would like to play with given they are feeling like playing a certain game/gamemode.
 
-In the project directory, you can run:
+The following is the User Story we made for the current version of the app:
+### User Story
 
-### `npm start`
+```md
+AS A league of legends player
+I WANT a better way to notate who friends are
+SO THAT I play with people more frequently and get better matchups for my game mode
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
+When the user first goes to the website, they are greeted by the homepage, which has information about what the app is for. From there they can log in or create an account. Once logged in, they will be redirected to their profile page, which will show their friendlist. With a new account, this section will be empty. Clicking the Add Friend button will take the user to a form to add a friend. Once the fields are filled out and submitted, they will be redirected to their friendlist, where they can now see the friend they have made. From there, the user can add, edit, or remove friends as they wish.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Links
+Heroku Deployed App: https://hawkshot-friend-list.herokuapp.com/
 
-### `npm test`
+GitHub Repo: https://github.com/AbbyDabbyDooDoesGitHub/Hawkshot_Gaming_Friend_Tracker
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Issues
+There is currently a known issue with the deployed app. It will load up the homepage just fine, but if the user tries to go to any other page, they will only be met with a blank page.
 
-### `npm run build`
+## Technologies
+Heroku
+MongoDb Atlas
+NPM Apollo Client Package <br />
+NPM Apollo-Server-Express Package<br />
+NPM GraphQL Package<br />
+NPM Bcrypt Package<br />
+NPM Express.js Package<br />
+NPM JSONWebToken<br />
+NPM Mongoose Package<br />
+Node.js<br />
+NPM nodemon Package<br />
+NPM JWT-Decode Package<br />
+NPM React Package<br />
+NPM React-Bootstrap<br />
+React-Dom<br />
+React-Router-Dom<br />
+React-Scripts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contribution
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Main Devs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Abby - https://github.com/AbbyDabbyDooDoesGitHub<br />
+Gwanju - https://github.com/thegwanj<br />
+Andrew - https://github.com/Jinnywoo
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Additional Devs
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sara   - https://github.com/teshome28sara
