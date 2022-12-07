@@ -11,6 +11,7 @@
 ## Description 
 Hawkshot is an app developed to help users keep track of and organize their gaming friends list. Users will be able to add friends with information including: which game they are from, if the friend is known in-real-life (irl), and any other notable information the user would like to include. We hope that this will help users make more informed decisions about who they would like to play with given they are feeling like playing a certain game/gamemode.
 
+The following is the User Story we made for the current version of the app:
 ### User Story
 
 ```md
@@ -20,6 +21,7 @@ SO THAT I play with people more frequently and get better matchups for my game m
 ```
 
 ## Usage
+When the user first goes to the website, they are greeted by the homepage, which has information about what the app is for. From there they can log in or create an account. Once logged in, they will be redirected to their profile page, which will show their friendlist. With a new account, this section will be empty. Clicking the Add Friend button will take the user to a form to add a friend. Once the fields are filled out and submitted, they will be redirected to their friendlist, where they can now see the friend they have made. From there, the user can add, edit, or remove friends as they wish.
 
 ## Links
 Heroku Deployed App: https://hawkshot-friend-list.herokuapp.com/
