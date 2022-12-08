@@ -63,7 +63,7 @@ export default function MeetDevs() {
 
             </div>
 
-            <div class="dev-div center">
+            {/* <div class="dev-div center">
 
                 <h4>Sara Teshome</h4>
 
@@ -73,7 +73,7 @@ export default function MeetDevs() {
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sara-w-teshome/">LinkedIn</a>
                 </p>
 
-            </div>
+            </div> */}
 
         </div>
 
@@ -112,7 +112,7 @@ export default function MeetDevs() {
                 <p class="dev-text center">
 
                     See the README.md in our 
-                    <a target="_blank" rel="noreferrer" href="https://github.com/AbbyDabbyDooDoesGitHub/UW_Project3_LeagueOfLegendsFriendTracker">GitHub repository</a>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/AbbyDabbyDooDoesGitHub/Hawkshot_Gaming_Friend_Tracker">GitHub repository</a>
                     for complete attributions for this project.
 
                 </p>
